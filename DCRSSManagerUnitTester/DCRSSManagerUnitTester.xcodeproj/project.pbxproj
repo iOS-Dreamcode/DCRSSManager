@@ -1,0 +1,336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3462DBA215948A4F008A4878 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3462DBA115948A4F008A4878 /* UIKit.framework */; };
+		3462DBA415948A4F008A4878 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3462DBA315948A4F008A4878 /* Foundation.framework */; };
+		3462DBA615948A4F008A4878 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3462DBA515948A4F008A4878 /* CoreGraphics.framework */; };
+		3462DBAC15948A4F008A4878 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3462DBAA15948A4F008A4878 /* InfoPlist.strings */; };
+		3462DBAE15948A4F008A4878 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3462DBAD15948A4F008A4878 /* main.m */; };
+		3462DBB215948A4F008A4878 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3462DBB115948A4F008A4878 /* AppDelegate.m */; };
+		3462DBB515948A4F008A4878 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3462DBB415948A4F008A4878 /* ViewController.m */; };
+		3462DBB815948A4F008A4878 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3462DBB615948A4F008A4878 /* ViewController_iPhone.xib */; };
+		3462DBBB15948A4F008A4878 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3462DBB915948A4F008A4878 /* ViewController_iPad.xib */; };
+		3462DBCC15948AAB008A4878 /* DCRSSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3462DBC515948AAB008A4878 /* DCRSSManager.m */; };
+		3462DBCD15948AAB008A4878 /* DCRSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3462DBC715948AAB008A4878 /* DCRSSParser.m */; };
+		3462DBCE15948AAB008A4878 /* DCXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3462DBC915948AAB008A4878 /* DCXMLElement.m */; };
+		3462DBCF15948AAB008A4878 /* DCXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3462DBCB15948AAB008A4878 /* DCXMLParser.m */; };
+		3462DBD215948B29008A4878 /* DCRSSParserUT.m in Sources */ = {isa = PBXBuildFile; fileRef = 3462DBD115948B29008A4878 /* DCRSSParserUT.m */; };
+		3462DBD415948C34008A4878 /* rss.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3462DBD315948C34008A4878 /* rss.xml */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3462DB9D15948A4F008A4878 /* DCRSSManagerUnitTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCRSSManagerUnitTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3462DBA115948A4F008A4878 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3462DBA315948A4F008A4878 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3462DBA515948A4F008A4878 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3462DBA915948A4F008A4878 /* DCRSSManagerUnitTester-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DCRSSManagerUnitTester-Info.plist"; sourceTree = "<group>"; };
+		3462DBAB15948A4F008A4878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3462DBAD15948A4F008A4878 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3462DBAF15948A4F008A4878 /* DCRSSManagerUnitTester-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DCRSSManagerUnitTester-Prefix.pch"; sourceTree = "<group>"; };
+		3462DBB015948A4F008A4878 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3462DBB115948A4F008A4878 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3462DBB315948A4F008A4878 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3462DBB415948A4F008A4878 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3462DBB715948A4F008A4878 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		3462DBBA15948A4F008A4878 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		3462DBC415948AAB008A4878 /* DCRSSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCRSSManager.h; sourceTree = "<group>"; };
+		3462DBC515948AAB008A4878 /* DCRSSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCRSSManager.m; sourceTree = "<group>"; };
+		3462DBC615948AAB008A4878 /* DCRSSParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCRSSParser.h; sourceTree = "<group>"; };
+		3462DBC715948AAB008A4878 /* DCRSSParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCRSSParser.m; sourceTree = "<group>"; };
+		3462DBC815948AAB008A4878 /* DCXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCXMLElement.h; sourceTree = "<group>"; };
+		3462DBC915948AAB008A4878 /* DCXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCXMLElement.m; sourceTree = "<group>"; };
+		3462DBCA15948AAB008A4878 /* DCXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCXMLParser.h; sourceTree = "<group>"; };
+		3462DBCB15948AAB008A4878 /* DCXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCXMLParser.m; sourceTree = "<group>"; };
+		3462DBD015948B29008A4878 /* DCRSSParserUT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCRSSParserUT.h; path = UnitTesters/DCRSSParserUT.h; sourceTree = "<group>"; };
+		3462DBD115948B29008A4878 /* DCRSSParserUT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCRSSParserUT.m; path = UnitTesters/DCRSSParserUT.m; sourceTree = "<group>"; };
+		3462DBD315948C34008A4878 /* rss.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = rss.xml; path = DCRSSManagerUnitTester/UnitTesters/rss.xml; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3462DB9A15948A4F008A4878 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3462DBA215948A4F008A4878 /* UIKit.framework in Frameworks */,
+				3462DBA415948A4F008A4878 /* Foundation.framework in Frameworks */,
+				3462DBA615948A4F008A4878 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3462DB9215948A4F008A4878 = {
+			isa = PBXGroup;
+			children = (
+				3462DBD315948C34008A4878 /* rss.xml */,
+				3462DBC315948AAB008A4878 /* DCRSSManager */,
+				3462DBA715948A4F008A4878 /* DCRSSManagerUnitTester */,
+				3462DBA015948A4F008A4878 /* Frameworks */,
+				3462DB9E15948A4F008A4878 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3462DB9E15948A4F008A4878 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3462DB9D15948A4F008A4878 /* DCRSSManagerUnitTester.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3462DBA015948A4F008A4878 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3462DBA115948A4F008A4878 /* UIKit.framework */,
+				3462DBA315948A4F008A4878 /* Foundation.framework */,
+				3462DBA515948A4F008A4878 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3462DBA715948A4F008A4878 /* DCRSSManagerUnitTester */ = {
+			isa = PBXGroup;
+			children = (
+				3462DBB015948A4F008A4878 /* AppDelegate.h */,
+				3462DBB115948A4F008A4878 /* AppDelegate.m */,
+				3462DBB315948A4F008A4878 /* ViewController.h */,
+				3462DBB415948A4F008A4878 /* ViewController.m */,
+				3462DBB615948A4F008A4878 /* ViewController_iPhone.xib */,
+				3462DBB915948A4F008A4878 /* ViewController_iPad.xib */,
+				3462DBA815948A4F008A4878 /* Supporting Files */,
+				3462DBD015948B29008A4878 /* DCRSSParserUT.h */,
+				3462DBD115948B29008A4878 /* DCRSSParserUT.m */,
+			);
+			path = DCRSSManagerUnitTester;
+			sourceTree = "<group>";
+		};
+		3462DBA815948A4F008A4878 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3462DBA915948A4F008A4878 /* DCRSSManagerUnitTester-Info.plist */,
+				3462DBAA15948A4F008A4878 /* InfoPlist.strings */,
+				3462DBAD15948A4F008A4878 /* main.m */,
+				3462DBAF15948A4F008A4878 /* DCRSSManagerUnitTester-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3462DBC315948AAB008A4878 /* DCRSSManager */ = {
+			isa = PBXGroup;
+			children = (
+				3462DBC415948AAB008A4878 /* DCRSSManager.h */,
+				3462DBC515948AAB008A4878 /* DCRSSManager.m */,
+				3462DBC615948AAB008A4878 /* DCRSSParser.h */,
+				3462DBC715948AAB008A4878 /* DCRSSParser.m */,
+				3462DBC815948AAB008A4878 /* DCXMLElement.h */,
+				3462DBC915948AAB008A4878 /* DCXMLElement.m */,
+				3462DBCA15948AAB008A4878 /* DCXMLParser.h */,
+				3462DBCB15948AAB008A4878 /* DCXMLParser.m */,
+			);
+			name = DCRSSManager;
+			path = ../DCRSSManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3462DB9C15948A4F008A4878 /* DCRSSManagerUnitTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3462DBBE15948A4F008A4878 /* Build configuration list for PBXNativeTarget "DCRSSManagerUnitTester" */;
+			buildPhases = (
+				3462DB9915948A4F008A4878 /* Sources */,
+				3462DB9A15948A4F008A4878 /* Frameworks */,
+				3462DB9B15948A4F008A4878 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DCRSSManagerUnitTester;
+			productName = DCRSSManagerUnitTester;
+			productReference = 3462DB9D15948A4F008A4878 /* DCRSSManagerUnitTester.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3462DB9415948A4F008A4878 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 3462DB9715948A4F008A4878 /* Build configuration list for PBXProject "DCRSSManagerUnitTester" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3462DB9215948A4F008A4878;
+			productRefGroup = 3462DB9E15948A4F008A4878 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3462DB9C15948A4F008A4878 /* DCRSSManagerUnitTester */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3462DB9B15948A4F008A4878 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3462DBD415948C34008A4878 /* rss.xml in Resources */,
+				3462DBAC15948A4F008A4878 /* InfoPlist.strings in Resources */,
+				3462DBB815948A4F008A4878 /* ViewController_iPhone.xib in Resources */,
+				3462DBBB15948A4F008A4878 /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3462DB9915948A4F008A4878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3462DBAE15948A4F008A4878 /* main.m in Sources */,
+				3462DBB215948A4F008A4878 /* AppDelegate.m in Sources */,
+				3462DBB515948A4F008A4878 /* ViewController.m in Sources */,
+				3462DBCC15948AAB008A4878 /* DCRSSManager.m in Sources */,
+				3462DBCD15948AAB008A4878 /* DCRSSParser.m in Sources */,
+				3462DBCE15948AAB008A4878 /* DCXMLElement.m in Sources */,
+				3462DBCF15948AAB008A4878 /* DCXMLParser.m in Sources */,
+				3462DBD215948B29008A4878 /* DCRSSParserUT.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3462DBAA15948A4F008A4878 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3462DBAB15948A4F008A4878 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3462DBB615948A4F008A4878 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3462DBB715948A4F008A4878 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		3462DBB915948A4F008A4878 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3462DBBA15948A4F008A4878 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3462DBBC15948A4F008A4878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3462DBBD15948A4F008A4878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3462DBBF15948A4F008A4878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DCRSSManagerUnitTester/DCRSSManagerUnitTester-Prefix.pch";
+				INFOPLIST_FILE = "DCRSSManagerUnitTester/DCRSSManagerUnitTester-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3462DBC015948A4F008A4878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DCRSSManagerUnitTester/DCRSSManagerUnitTester-Prefix.pch";
+				INFOPLIST_FILE = "DCRSSManagerUnitTester/DCRSSManagerUnitTester-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3462DB9715948A4F008A4878 /* Build configuration list for PBXProject "DCRSSManagerUnitTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3462DBBC15948A4F008A4878 /* Debug */,
+				3462DBBD15948A4F008A4878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3462DBBE15948A4F008A4878 /* Build configuration list for PBXNativeTarget "DCRSSManagerUnitTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3462DBBF15948A4F008A4878 /* Debug */,
+				3462DBC015948A4F008A4878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3462DB9415948A4F008A4878 /* Project object */;
+}
