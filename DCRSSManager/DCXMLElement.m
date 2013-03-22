@@ -45,8 +45,10 @@
     if(self) {
         [self initResources];
         name = [[NSString stringWithString:elementName] retain];
+        NSLog(@"name:%@",name);
         parent = parentElement;
         attributes = [[NSDictionary dictionaryWithDictionary:attributeDict] retain];
+        NSLog(@"attributes:%@",attributes);
     }
     return self;
 }
@@ -144,12 +146,15 @@
     NSLog(@"%s",__PRETTY_FUNCTION__);  
 }
 
-- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI       qualifiedName:(NSString *)qualifiedName attributes:(NSDictionary *)attributeDict { 
-    //NSLog(@"%s %@",__PRETTY_FUNCTION__,elementName);
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qualifiedName attributes:(NSDictionary *)attributeDict { 
+    NSLog(@"%s %@",__PRETTY_FUNCTION__,elementName);
     
     if([self isRootElement] && 0 == [name length]) {
+        NSLog(@"This is root element:%@",name);
         name = elementName;
-        //NSLog(@"This is root element %@",name);
+        attributes = [attributeDict retain];
+        parent = nil;
+        
     } else {
         // Create child element
         //NSLog(@"This is child element %@ for parent element %@",elementName, name);
@@ -160,7 +165,7 @@
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
-    //NSLog(@"%s %@",__PRETTY_FUNCTION__,name);
+    NSLog(@"%s %@",__PRETTY_FUNCTION__,name);
     if(![self isRootElement]) 
         [parser setDelegate:parent]; 
 }

@@ -16,7 +16,7 @@ extern NSString* DC_NOTIF_PARSING_COMPLETED;
     - (id)initWith: (NSData*) xmlData;
     - (void) setXMLData:(NSData*)xmlData;
     - (void)parseAsync;
-    - (void)parseSync;
+    - (void)parse;
     - (NSError*)error;
     - (DCXMLElement*)rootElement;
     - (void)dumpAllItems;

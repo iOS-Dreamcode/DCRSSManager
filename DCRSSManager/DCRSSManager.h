@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 extern NSString* DCRSSManagerUpdateAvailableNotification;
+extern NSString* DCRSSManagerErrorKey;
+extern NSString* DCRSSManagerParserKey;
+extern NSString* DCRSSManagerTagKey;
 
 @interface DCRSSManager : NSObject
 - (void)fetchAsync:(id)dataSource withTag:(NSString*)tag;

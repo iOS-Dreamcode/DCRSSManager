@@ -70,12 +70,12 @@ NSString* DC_NOTIF_PARSING_COMPLETED = @"com.dc.dcxmlparser.parsingcompleted";
 - (void)parseAsync {
     dispatch_queue_t parser_queue = dispatch_queue_create("com.dc.dcxmlparser.parser",nil);  
     dispatch_async(parser_queue, ^{
-        [self parseSync];
+        [self parse];
         [self notifyParsingCompleted];
     });
 }
 
-- (void)parseSync {
+- (void)parse {
     rootElement = [[DCXMLElement alloc] initAsRootElement];
     [xmlParser setDelegate:rootElement];
     [xmlParser parse]; 

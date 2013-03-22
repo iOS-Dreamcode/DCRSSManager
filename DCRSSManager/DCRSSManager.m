@@ -9,12 +9,19 @@
 #import "DCRSSManager.h"
 #import "DCRSSParser.h"
 
-NSString* DCRSSManagerUpdateAvailableNotification = @"com.dc.dcrssmgr.updateavailable";
+/* Notification */
+NSString* DCRSSManagerUpdateAvailableNotification   = @"com.dc.dcrssmgr.updateavailable";
+NSString* DCRSSManagerErrorKey                      = @"com.dc.dcrssmgr.key.error";
+NSString* DCRSSManagerParserKey                     = @"com.dc.dcrssmgr.key.parser";
+NSString* DCRSSManagerTagKey                        = @"com.dc.dcrssmgr.key.tag";
+/* Notification */
+
 static NSString* ERR_FETCHASYNC_DATATYPE_MISMATCH = @"fetchAsync expecting NSData or NSURL as dataSource.";
 
 @interface DCRSSManager ()
     @property (nonatomic,retain) NSData* dataToParse;
     - (void)parseData:(NSData*)data withTag:(NSString*)tag;
+    - (void)handleError:(NSError*)error withTag:(NSString*)tag;
 @end
 
 @implementation DCRSSManager
@@ -27,13 +34,26 @@ static NSString* ERR_FETCHASYNC_DATATYPE_MISMATCH = @"fetchAsync expecting NSDat
  Creates a par
  **/
 - (void)parseData:(NSData*)data withTag:(NSString*)tag {
-    // TODO: test with autorelease
-    DCRSSParser* p = [[DCRSSParser alloc] initWith:data];
+    DCRSSParser* p = [[[DCRSSParser alloc] initWith:data] autorelease];
     p.tag = tag;
-    [p parseSync];
+    [p parse];
+    if([p error]) {
+        [self handleError:[p error] withTag:tag];
+    } else {
+        NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys:tag,DCRSSManagerTagKey,
+                                                                            p,DCRSSManagerParserKey,
+                                                                            nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:DCRSSManagerUpdateAvailableNotification
+                                                            object:nil userInfo:userInfo];
+    }
+}
+
+- (void)handleError:(NSError*)error withTag:(NSString*)tag {
+    NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys:tag,DCRSSManagerTagKey,
+                                                                        error,DCRSSManagerErrorKey,
+                                                                        nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:DCRSSManagerUpdateAvailableNotification
-                                                        object:p];
-    [p release];
+                                                        object:nil userInfo:userInfo];
 }
 
 #pragma mark pimpl ends
@@ -74,6 +94,7 @@ static NSString* ERR_FETCHASYNC_DATATYPE_MISMATCH = @"fetchAsync expecting NSDat
                              NSError* error) {
              if(error) {
                  NSLog(@"Error %d",[error code]);
+                 [self handleError:error withTag:tag];
              } else {
                  NSString* dstr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                  NSLog(@"data reveived %@",dstr);
